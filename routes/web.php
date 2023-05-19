@@ -26,7 +26,7 @@ Route::name('commandes.')->prefix('commandes')->controller("")->group(function()
 //=========================== START Admin dashboards ROUTE ============================================//
 Route::controller(Admin::class)
     ->prefix("/admin")
-    ->name(".admin")
+    ->name("admin.")
     ->middleware(["auth","user-role:admin"])
     ->group(function () {
         Route::get("/dashbord","index")->name("index");
@@ -38,7 +38,7 @@ Route::controller(Admin::class)
 //=========================== START Client dashboards ROUTE ============================================//
 Route::controller(Client::class)
     ->prefix("/client")
-    ->name("clien.")
+    ->name("client.")
     ->middleware(["auth","user-role:client,admin"])
     ->group(function () {
         Route::get("/dashbord","index")->name("index");
