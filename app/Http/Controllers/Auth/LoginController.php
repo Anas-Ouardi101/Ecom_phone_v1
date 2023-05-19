@@ -55,7 +55,7 @@ class LoginController extends Controller
     
         if ($user->status != 'active') {
             return back()->withErrors([
-                'email' => 'Your account is BLOCKED. Please contact support for assistance.',
+                'email' => 'Voter compt est desactive. Please contact support for assistance.',
             ])->onlyInput('email');
         }
 
