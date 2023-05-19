@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\User;
+use Illuminate\Http\Request;
+
 
 class LoginController extends Controller
 {
@@ -65,11 +67,11 @@ class LoginController extends Controller
             
             if(auth()->user()->role == 'admin')
             {
-                return redirect()->route('Admin.dashboard');
+                return redirect()->route('admin.index');
             }
             else if(auth()->user()->role == 'client')
             {
-                return redirect()->route('Client.dashboard');
+                return redirect()->route('client.index');
             }
             
             else{
