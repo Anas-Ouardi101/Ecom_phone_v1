@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminDashbord as Admin;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,14 @@ Route::name('commandes.')->prefix('commandes')->controller("")->group(function()
 
 
 //=========================== START  dashboards ROUTE ============================================//
-Route::get('dashboards',function (){
-    return view('Admin.dashbord');
-});
+Route::controller(Admin::class)
+    ->prefix("/admin")
+    ->name(".admin")
+    ->middleware(["auth,user_role:admin"])
+    ->group(function () {
+        Route::get("/dashbord","index")->name("index");
+            
+    });
 //=========================== END  dashboards ROUTE ============================================//
 
 //=========================== START  Produits ROUTE ============================================//
