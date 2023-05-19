@@ -33,7 +33,7 @@
     <link href="{{asset("css/style.css")}}" rel="stylesheet">
 
     {{-- Icon title --}}
-    <link rel="icon" type="image/png" href="https://www.flaticon.com/free-icons/cross-wrench"/>
+    <link rel="icon" type="image/png" href="{{asset("img/logo.png")}}"/>
 </head>
 
 <body>
