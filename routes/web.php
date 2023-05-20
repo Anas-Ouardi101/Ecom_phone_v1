@@ -16,7 +16,7 @@ use App\Http\Controllers\Client\ClientController as Client;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 //=========================== START ORDERS ROUTE ============================================//
 Route::name('commandes.')->prefix('commandes')->controller("")->group(function(){});
