@@ -19,6 +19,7 @@ class UsersTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'name' => 'John Doe',
+            'avatar'=>"https://th.bing.com/th/id/OIP.KGdLPsiqGjKqCYuhzhmmWgHaEP?pid=ImgDet&rs=1",
             'email' => 'johndoe@example.com',
             'email_verified_at' => now(),
             'password' => Hash::make('12341234'),
@@ -32,6 +33,7 @@ class UsersTableSeeder extends Seeder
         // Add more seed data if needed
         DB::table('users')->insert([
             'name' => 'John Doe',
+            'avatar'=>"https://img.freepik.com/free-vector/vector-avatar-smiling-man-facial-expression_102172-203.jpg?size=338&ext=jpg",
             'email' => 'johndoe1@example.com',
             'email_verified_at' => now(),
             'password' => Hash::make('12341234'),
@@ -46,6 +48,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'John Doe',
             'email' => 'johndoe2@example.com',
+            'avatar'=>"https://th.bing.com/th/id/OIP.DU3kqJmwpKSmWtoJLcwdSAHaHa?pid=ImgDet&rs=1",
             'email_verified_at' => now(),
             'password' => Hash::make('12341234'),
             'role' => 'admin',
@@ -58,6 +61,7 @@ class UsersTableSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'John Doe',
             'email' => 'johndoe3@example.com',
+            'avatar'=>"https://th.bing.com/th/id/OIP.rO1pKb1aoqGqwvHsr26zJQAAAA?pid=ImgDet&w=200&h=200&rs=1",
             'email_verified_at' => now(),
             'password' => Hash::make('12341234'),
             'role' => 'admin',
